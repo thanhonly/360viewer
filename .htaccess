@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "My Protected Area"
+AuthUserFile E:/Aquaring/360_viewer/.htpasswd
+Require valid-user

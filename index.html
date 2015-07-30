@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Reel Clockwise Sequence Object Movie Example</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+	<link href="css/jquery.fancybox.css" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.reel.js"></script>
+	<script src="js/jquery.fancybox.pack.js"></script>
+   
+	<style>
+	.reel-annotation {
+		width: 8%;
+	}
+	.inline {
+		display: none;
+	}
+	</style>
+	<script>
+	  $(document).ready(function(){
+		$('.fancybox').fancybox();
+	  });
+	</script>
+</head>
+<body>
+	<h1>360 Example</h1>
+	<img src="images/s7300a.jpg" class="reel" id="image" data-images="images/s7300a/#####.jpg|1..32|1" data-cw="true" data-frame="32"  data-responsive="true" width="1006" height="715" alt="">
+
+	<!-- Start annotation-->
+	<div class="reel-annotation" id="link_to_producer01" data-x="240,220,200,180,210,240,,,,,,,,,,,,,,,,,,,,,470,400,340,300,280,260" data-y="90" data-for="image">
+		<a href="#inline01" class="fancybox"><img src="images/button_5.png" width="100%"></a>
+	</div>
+	<div class="reel-annotation " id="link_to_producer02" data-x=",,,,,,,,,,,,,,,,,880,860,820,780,700,620,540,460,400,300,220,160,120,110," data-y="150" data-for="image">
+		<a href="#inline02" class="fancybox"><img src="images/button_5.png" width="100%"></a>
+	</div>
+	<!-- End annotation-->
+	<!-- Start Fancybox content-->
+	<div class="inline" id="inline01">
+		<div class="txt">
+			<h4>サブテンション</h4>
+			<p>新機構を搭載し、安定した上糸残り量を保持します。</p>
+		</div>
+	</div>
+	<div class="inline" id="inline02">
+		<div class="txt">
+			<h4>自動段部検出センサー</h4>
+			<p>センサーにより段部における厚みを自動検知して、安定した縫製を実現します。</p>
+		</div>
+	</div>
+	<!-- End Fancybox content-->
+
+	<!-- Or Javascript alternative setup:
+
+	<img id="image" src="images/s7300a.jpg" width="1006" height="715">
+	<script>
+	  $('#image').reel({
+		images:      'images/s7300a/#####.jpg|1..32',
+		cw:          true,
+		frame:       32,
+		velocity:    3,
+		duration:    6,
+		brake:       0.2,
+		annotations: {
+		  'link_to_producer01': {
+			node: {
+			  html: '<strong>Penguin B</strong> by '
+			},
+			link: {
+			  href: '#',
+			  text: 'UAV Factory'
+			},
+			x: [240,220,200,180,210,240,,,,,,,,,,,,,,,,,,,,,470,400,340,300,280,260], y: 90
+		  }
+		}
+	  });
+	</script>
+-->
+	<p>Reference: <a href="http://jquery.vostrel.cz/reel" target="_blank">http://jquery.vostrel.cz/reel</a></p>
+	<p>More demo: <a href="http://test.vostrel.net/jquery.reel/example/index.html" target="_blank">http://test.vostrel.net/jquery.reel/example/index.html</a></p>
+</body>
+</html>
+
